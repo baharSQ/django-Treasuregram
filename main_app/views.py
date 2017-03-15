@@ -9,5 +9,6 @@ class Treasure:
 		self.location = location
 treasures = [
 	Treasure ('Gold Nugget', 500.00, 'gold', "Curly's Creek, NM"),
-	Treasure ("Fool",0,'Pyrite',"Fool Fall, co")		
+	Treasure ("Fool's Gold",0,'Pyrite',"Fool's Fall, CO"),
+	Treasure ("Cofee Can",20.00,'tin','Acme, CA'),
 ]
