@@ -1,16 +1,6 @@
+{% extends 'base.html'%}
 {% load staticfiles %}
-<!DOCTYPE html>
-	<html>
-		<head>
-			<link rel = "stylesheet" 
-				  href = "{% static 'bootstrap.min.css' %}" />
-			<link rel = "stylesheet" type = "text/css"
-				  href = "{% static 'style.css' %}" />
-			<title>TreasureGram</title>
-		</head>
-		<body>
-			
-			<main class="container" role = "main">
+{% block content %}
 				<div class="row">
 				{% for treasure in treasures|dictsort:'name' %}
 					<div class="col-md-4">
@@ -30,6 +20,4 @@
 				{% endif %}
 				{% endfor %}
 				</div>
-			</main>
-		</body>
-	</html>
+{% endblock %}

@@ -1,13 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title></title>
-</head>
-<body>
-	<h1>{{ treasure.name }}</h1>
-	<img src="{{ treasure.img_url }}">
+{% extends 'base.html'%}
+{% load staticfiles %}
+{% block content %}
+	<div class='treasure panel panel-default'>
+		<div class='panel-heading'>
+			<h3 clss="panel-title">{{ treasure.name }}</h3>
+		</div>
+		<div class= 'panel-body'>
+			<div class='treasure-photo-detail'>
+				<img src="{{ treasure.img_url }}">
+			</div>
 	<p>{{ treasure.value }}</p>
 	<p>{{ treasure.location }}</p>
-</body>
-</html>
+		</div>
+	</div>
+{% endblock%}
